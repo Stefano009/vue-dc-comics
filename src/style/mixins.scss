@@ -8,8 +8,13 @@
         justify-content: center;
         align-items: center;
     }
-    @else if $type=='star' {
+    @else if $type=='start' {
         justify-content: start;
         align-items: start;
+    }
+    @else if $type=='column' {
+        flex-direction: column;
+        justify-content: start;
+        flex-wrap: wrap;
     }
 }
