@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="../assets/img/dc-logo.png" alt="">
+    <img src="../assets/img/dc-logo.png" alt="logo">
     <ul>
       <li :class="(link.current) ? 'active' : null" v-for="(link, index) in links" :key="index">
         <a :href="link.url">
