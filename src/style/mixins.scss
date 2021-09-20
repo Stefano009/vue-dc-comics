@@ -1,0 +1,11 @@
+// flex direction row
+@mixin flex($type: 'standard') {
+    display: flex;
+    @if $type=='spacearound' {
+        justify-content: space-around;
+    }
+    @else if $type=='center' {
+        justify-content: center;
+        align-items: center;
+    }
+}
