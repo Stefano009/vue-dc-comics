@@ -2,7 +2,7 @@
   <div class="header">
     <img src="../assets/img/dc-logo.png" alt="logo">
     <ul>
-      <li :class="(link.current) ? 'active' : null" v-for="(link, index) in links" :key="index">
+      <li @click="changeStatus(index)" :class="(link.current) ? 'active' : null" v-for="(link, index) in links" :key="index">
         <a :href="link.url">
           {{ link.text }}
         </a>
@@ -15,11 +15,20 @@
 import * as Links from '@/assets/data/Links.js';
 export default {
   name: 'Header',
-
   data() {
     return {
       links: Links.headerLinks
     }
+  },
+  methods: {
+    changeStatus(index) {
+          for (let i = 0; i < this.links.length; i++)
+        {
+          this.links[i].current = false;
+          this.links[index].current = true;
+        }
+
+}
   }
 }
 </script>
