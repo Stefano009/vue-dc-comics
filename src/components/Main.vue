@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="top">
-      <h1> --> Content goes here &lt;-- </h1>
+          <Cards />
     </div>
     <div class="bottom">
       <ul>
-        <li v-for="(link, index) in links" :key="index">
-          <img src="../assets/img/buy-comics-digital-comics.png" :alt="link.text">
-          <p>{{link.text}}</p>
+        <li v-for="({img, text}, index) in link" :key="index">
+          <!-- <h1>{{img}}</h1>00 -->
+          <img :src="require(`../assets/img/${img}`)" :alt="text">
+          <p>{{text}}</p>
         </li>
       </ul>
     </div>
@@ -15,34 +16,18 @@
 </template>
 
 <script>
-// import * as Links from '@/assets/data/Links.js';
+import * as Links from '@/assets/data/Links.js';
+import Cards from '@/components/Cards.vue'
 export default {
   name: 'Main',
+  components: {
+    Cards,
+  },
   data() {
     return {
-      links: [{
-        imgUrl: 'buy-comics-digital-comics.png',
-        text: 'digital comics'
-    },
-    {
-        imgUrl: 'buy-comics-digital-merchandise.png',
-        text: 'dc merchandise'
-    },
-    {
-        imgUrl: 'buy-comics-digital-subscriptions.png',
-        text: 'subscription'
-    },
-    {
-        imgUrl: 'buy-comics-digital-locator.png',
-        text: 'locator'
-    },
-    {
-        imgUrl: 'buy-dc-power-visa.svg',
-        text: 'DC power visa'
-    },
-]
+      link: Links.mainLinks 
     }
-  }
+}
 }
 </script>
 
@@ -52,7 +37,6 @@ export default {
 @import "@/style/mixins";
 .top {
   background-color: $topMain;
-  height: 200px;
   color: white;
   @include flex('start');
   padding: 1rem;
@@ -60,15 +44,17 @@ export default {
 .bottom ul {
   @include flex('center');
   list-style: none;
+  height: 150px;
   color: white;
-  background-color: blue;
+  background-color: #0282F9;
   text-transform: uppercase;
   li{
     @include flex('center'); 
     list-style: none;
+    padding: 3rem;
     img {
         height: 4rem;
-        padding: 1rem;
+        
       }
   }
   

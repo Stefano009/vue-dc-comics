@@ -192,26 +192,26 @@ const footerLinks = [{
         ],
     },
 ];
-// const mainLinks = [{
-//         imgUrl: '../img/buy-comics-digital-comics.png',
-//         text: 'digital comics'
-//     },
-//     {
-//         imgUrl: '../assets/img/buy-comics-digital-merchandise.png',
-//         text: 'dc merchandise'
-//     },
-//     {
-//         imgUrl: '../assets/img/buy-comics-digital-subscriptions.png',
-//         text: 'subscription'
-//     },
-//     {
-//         imgUrl: '../assets/img/buy-comics-digital-locator.png',
-//         text: 'locator'
-//     },
-//     {
-//         imgUrl: '../assets/img/buy-dc-power-visa.svg',
-//         text: 'DC power visa'
-//     },
-// ] remember to add to the export mainLinks
+const mainLinks = [{
+        img: "buy-comics-digital-comics.png",
+        text: "digital comics"
+    },
+    {
+        img: "buy-comics-merchandise.png",
+        text: "dc merchandise"
+    },
+    {
+        img: "buy-comics-subscriptions.png",
+        text: "subscription"
+    },
+    {
+        img: "buy-comics-shop-locator.png",
+        text: "locator"
+    },
+    {
+        img: "buy-dc-power-visa.svg",
+        text: "DC power visa"
+    },
+]
 
-export { headerLinks, footerLinks };
+export { headerLinks, footerLinks, mainLinks };

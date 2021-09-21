@@ -31,7 +31,11 @@ export default {
 .header {
   @include flex('spacearound');
   align-items: center;
-  line-height: 100px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: 90%;
+  font-size: .8rem;
+  margin: 0 auto;
   img {
     height: 80px;
   }
@@ -40,7 +44,7 @@ export default {
     @include flex('center');
   }
   li {
-    margin: 0 1rem;
+    margin: 0 .7rem;
   }
   li a {
     font-weight: 600;
